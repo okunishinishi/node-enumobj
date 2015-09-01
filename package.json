@@ -1,8 +1,8 @@
 {
   "name": "enumobj",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Define enum objects",
-  "main": "enumobj.js",
+  "main": "lib",
   "scripts": {
     "build": "./ci/build.js",
     "test": "./ci/test.js",

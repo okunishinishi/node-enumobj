@@ -194,7 +194,7 @@ module.exports = Enumobj;
 /**
  * Define enum objects
  * @module enumobj
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 "use strict";
