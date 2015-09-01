@@ -1,0 +1,19 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+
+"use strict";
+
+var Enumobj = require('./enumobj'),
+    create = require('./create');
+
+var enumobj = create.bind(this);
+
+enumobj.Enumobj = Enumobj;
+enumobj.create = create;
+
+module.exports = enumobj;
+
+

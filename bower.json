@@ -1,0 +1,17 @@
+{
+  "name": "enumobj",
+  "description": "Define enum objects",
+  "version": "1.0.1",
+  "homepage": "https://github.com/okunishinishi/node-enumobj#readme",
+  "authors": [
+    "Taka Okunishi"
+  ],
+  "main": "browser/argx",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}

@@ -13,6 +13,6 @@ var apeTasking = require('ape-tasking'),
 
 apeTasking.runTasks([
     function (callback) {
-        apeTesting.runMocha('*_test.js', {}, callback);
+        apeTesting.runNodeunit('test/*_test.js', {}, callback);
     }
 ], true);

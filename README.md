@@ -27,7 +27,7 @@ enumobj
 <!-- Description Start -->
 <a name="description"></a>
 
-Enum objects of js.
+Define enum objects
 
 <!-- Description End -->
 
@@ -55,13 +55,73 @@ npm install enumobj --save
 Usage
 -----
 
+### Basic usage
+
 ```javascript
 #!/usr/bin/env node
 
-var ponType = require('pon-type');
+var enumobj = require('enumobj');
+
+var levels = enumobj({
+    TRACE: 0,
+    DEBUG: 1,
+    INFO: 2,
+    ERROR: 3,
+    FATAL: 4
+});
+
+console.log(levels); // -> {TRACE: 0, DEBUG: 1, INFO: 2, ERROR: 3, FATAL: 4}
+
+//--------------
+// Get enum size
+//--------------
+console.log(levels.size()); // -> 5
+
+
+//--------------
+// Get a enum value
+//--------------
+console.log(levels.get("INFO")); // -> 2
+console.log(levels.get("_UNKNOWN_")); // -> undefined
+
+
+//--------------
+// Check key contained
+//--------------
+console.log(levels.has("ERROR")); // -> true
+console.log(levels.has("_UNKNOWN_")); // -> false
+
+
+//--------------
+// Get key for value
+//--------------
+console.log(levels.has(0)); // -> "TRACE"
+console.log(levels.has(100)); // -> undefined
 
 
 
+
+
+```
+
+
+### Add descriptions
+
+```javascript
+#!/usr/bin/env node
+
+var enumobj = require('enumobj');
+
+var roles = enumobj({
+    ADMIN: {$val: 1, $desc: "Nothing is off limits."},
+    STAFF: {$val: 2, $desc: "Can view admin area, but not edit."},
+    CUSTOMER: {$val: 3, $desc: "Can not access admin area."}
+});
+
+console.log(roles); // -> {ADMIN: 1, STAFF: 2, CUSTOMER:3}
+
+roles.get('ADMIN'); // -> 1
+roles.desc('ADMIN'); // -> "Nothing is off limits."
 ```
 
 <!-- Section from "docs/readme/02.Usage.md.hbs" End -->

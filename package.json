@@ -1,7 +1,7 @@
 {
   "name": "enumobj",
-  "version": "1.0.0",
-  "description": "Enum objects of js.",
+  "version": "1.0.1",
+  "description": "Define enum objects",
   "main": "enumobj.js",
   "scripts": {
     "build": "./ci/build.js",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/okunishinishi/node-enumobj#readme",
   "devDependencies": {
+    "ape-compiling": "^1.0.3",
     "ape-covering": "^1.0.8",
     "ape-deploying": "^1.0.8",
     "ape-releasing": "^1.0.14",
@@ -36,8 +37,8 @@
     "ape-tmpl": "^1.0.9",
     "ape-updating": "^1.0.1",
     "coz": "^3.0.12",
-    "coz-tmpl": "^1.0.3"
+    "coz-tmpl": "^1.0.3",
+    "extend": "^3.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
