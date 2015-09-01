@@ -1,12 +1,12 @@
 {
   "name": "enumobj",
   "description": "Define enum objects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/okunishinishi/node-enumobj#readme",
   "authors": [
     "Taka Okunishi"
   ],
-  "main": "browser/argx",
+  "main": "browser/enumobj.js",
   "license": "MIT",
   "ignore": [
     "**/.*",

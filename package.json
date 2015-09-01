@@ -1,6 +1,6 @@
 {
   "name": "enumobj",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Define enum objects",
   "main": "enumobj.js",
   "scripts": {
