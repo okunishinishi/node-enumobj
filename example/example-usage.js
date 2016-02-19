@@ -14,6 +14,16 @@ let levels = enumobj({
 
 console.log(levels); // -> {TRACE: 0, DEBUG: 1, INFO: 2, ERROR: 3, FATAL: 4}
 
+function doSomething(level) {
+    switch (level) {
+        case levels.TRACE:
+            /*...*/
+            break;
+        default:
+            break;
+    }
+}
+
 //--------------
 // Get enum size
 //--------------
@@ -22,6 +32,7 @@ console.log(levels.size()); // -> 5
 //--------------
 // Get a enum value
 //--------------
+console.log(levels.INFO); // -> 2
 console.log(levels.get("INFO")); // -> 2
 console.log(levels.get("_UNKNOWN_")); // -> undefined
 
