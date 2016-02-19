@@ -1,28 +1,29 @@
 /**
  * Test for enumobj.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
 "use strict";
 
-var Enumobj = require('../lib/enumobj');
+const Enumobj = require('../lib/enumobj'),
+    assert = require('assert');
 
 
-exports['Create enumobj.'] = function (test) {
-    test.ok(Enumobj);
+it('Create enumobj.', (done) => {
+    assert.ok(Enumobj);
 
     var userRoles = new Enumobj({
         ADMIN: {$val: 1, $desc: "Nothing is off limits."},
         STAFF: {$val: 2, $desc: "Can view admin area, but not edit."},
         CUSTOMER: {$val: 3, $desc: "Can not access admin area."}
     });
-    test.equal(userRoles.size(), 3);
-    test.equal(userRoles.meta('STAFF')['$key'], 'STAFF');
-    test.equal(userRoles.desc('ADMIN'), "Nothing is off limits.");
-    test.equal(userRoles.get('ADMIN'), userRoles.ADMIN);
-    test.equal(userRoles.keyForValue(3), "CUSTOMER");
-    test.equal(userRoles.has('admin'), false);
-    test.equal(userRoles.has('ADMIN'), true);
-    test.done();
-};
+    assert.equal(userRoles.size(), 3);
+    assert.equal(userRoles.meta('STAFF')['$key'], 'STAFF');
+    assert.equal(userRoles.desc('ADMIN'), "Nothing is off limits.");
+    assert.equal(userRoles.get('ADMIN'), userRoles.ADMIN);
+    assert.equal(userRoles.keyForValue(3), "CUSTOMER");
+    assert.equal(userRoles.has('admin'), false);
+    assert.equal(userRoles.has('ADMIN'), true);
+    done();
+});
 
 

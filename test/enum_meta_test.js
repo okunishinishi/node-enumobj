@@ -1,32 +1,26 @@
 /**
  * Test case for enumMeta.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var enumMeta = require('../lib/enum_meta.js');
+const enumMeta = require('../lib/enum_meta.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Enum meta'] = function (test) {
+it('Enum meta', (done) => {
     var meta = enumMeta({
         foo: 'bar'
     });
-    test.equal(meta.foo.$val, 'bar');
-    test.done();
-};
+    assert.equal(meta.foo.$val, 'bar');
+    done();
+});
 
-exports['Validate meta.'] = function (test) {
-    test.throws(function () {
+it('Validate meta.', (done) => {
+    assert.throws(() => {
         enumMeta.validate({
             foo: {$val: 1},
             bar: {$val: 1}
         });
     });
-    test.done();
-};
+    done();
+});

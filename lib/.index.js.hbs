@@ -6,10 +6,10 @@
 
 "use strict";
 
-var Enumobj = require('./enumobj'),
+const Enumobj = require('./enumobj'),
     create = require('./create');
 
-var enumobj = create.bind(this);
+let enumobj = create.bind(this);
 
 enumobj.Enumobj = Enumobj;
 enumobj.create = create;
