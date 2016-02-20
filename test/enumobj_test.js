@@ -29,8 +29,8 @@ describe('enumobj', () => {
         assert.deepEqual(userRoles.keys(), ['ADMIN', 'STAFF', 'CUSTOMER']);
         assert.deepEqual(userRoles.values(), [1, 2, 3]);
 
-        let json = JSON.stringify(userRoles, null, 4);
-        assert.ok(json);
+        let json = JSON.stringify(userRoles);
+        assert.equal(json, '{"ADMIN":1,"STAFF":2,"CUSTOMER":3}');
         done();
     });
 });
