@@ -1,6 +1,6 @@
 {
   "name": "enumobj",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Define enum objects",
   "main": "lib",
   "scripts": {
